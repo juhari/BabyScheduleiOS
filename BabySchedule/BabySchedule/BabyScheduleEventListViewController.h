@@ -1,5 +1,5 @@
 //
-//  BabyScheduleSecondViewController.h
+//  BabyScheduleEventListViewController.h
 //  BabySchedule
 //
 //  Created by Juha Riippi on 10.6.2012.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BabyScheduleSecondViewController : UIViewController
+@interface BabyScheduleEventListViewController : UITableViewController
+
+@property (strong) NSMutableArray *events;
 
 @end

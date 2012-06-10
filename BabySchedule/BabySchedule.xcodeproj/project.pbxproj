@@ -17,7 +17,6 @@
 		96A5951F15847A6600E97FC7 /* BabyScheduleFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */; };
 		96A5952115847A6600E97FC7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952015847A6600E97FC7 /* first.png */; };
 		96A5952315847A6600E97FC7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952215847A6600E97FC7 /* first@2x.png */; };
-		96A5952615847A6600E97FC7 /* BabyScheduleSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5952515847A6600E97FC7 /* BabyScheduleSecondViewController.m */; };
 		96A5952815847A6600E97FC7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952715847A6600E97FC7 /* second.png */; };
 		96A5952A15847A6600E97FC7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952915847A6600E97FC7 /* second@2x.png */; };
 		96A5953215847A6700E97FC7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5953115847A6700E97FC7 /* SenTestingKit.framework */; };
@@ -25,6 +24,8 @@
 		96A5953415847A6700E97FC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950A15847A6600E97FC7 /* Foundation.framework */; };
 		96A5953C15847A6700E97FC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96A5953A15847A6700E97FC7 /* InfoPlist.strings */; };
 		96A5953F15847A6700E97FC7 /* BabyScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5953E15847A6700E97FC7 /* BabyScheduleTests.m */; };
+		96A5954C1584804600E97FC7 /* BabyScheduleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5954B1584804600E97FC7 /* BabyScheduleEvent.m */; };
+		96A5954F15848C7000E97FC7 /* BabyScheduleEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5954E15848C7000E97FC7 /* BabyScheduleEventListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +54,6 @@
 		96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleFirstViewController.m; sourceTree = "<group>"; };
 		96A5952015847A6600E97FC7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		96A5952215847A6600E97FC7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		96A5952415847A6600E97FC7 /* BabyScheduleSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyScheduleSecondViewController.h; sourceTree = "<group>"; };
-		96A5952515847A6600E97FC7 /* BabyScheduleSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleSecondViewController.m; sourceTree = "<group>"; };
 		96A5952715847A6600E97FC7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		96A5952915847A6600E97FC7 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		96A5953015847A6700E97FC7 /* BabyScheduleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyScheduleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +62,10 @@
 		96A5953B15847A6700E97FC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96A5953D15847A6700E97FC7 /* BabyScheduleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyScheduleTests.h; sourceTree = "<group>"; };
 		96A5953E15847A6700E97FC7 /* BabyScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleTests.m; sourceTree = "<group>"; };
+		96A5954A1584804600E97FC7 /* BabyScheduleEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleEvent.h; sourceTree = "<group>"; };
+		96A5954B1584804600E97FC7 /* BabyScheduleEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleEvent.m; sourceTree = "<group>"; };
+		96A5954D15848C7000E97FC7 /* BabyScheduleEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleEventListViewController.h; sourceTree = "<group>"; };
+		96A5954E15848C7000E97FC7 /* BabyScheduleEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleEventListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,15 +125,10 @@
 		96A5950E15847A6600E97FC7 /* BabySchedule */ = {
 			isa = PBXGroup;
 			children = (
-				96A5951715847A6600E97FC7 /* BabyScheduleAppDelegate.h */,
-				96A5951815847A6600E97FC7 /* BabyScheduleAppDelegate.m */,
-				96A5951A15847A6600E97FC7 /* MainStoryboard.storyboard */,
-				96A5951D15847A6600E97FC7 /* BabyScheduleFirstViewController.h */,
-				96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */,
+				96A5954915847F7600E97FC7 /* Model */,
+				96A5954815847F6B00E97FC7 /* GUI */,
 				96A5952015847A6600E97FC7 /* first.png */,
 				96A5952215847A6600E97FC7 /* first@2x.png */,
-				96A5952415847A6600E97FC7 /* BabyScheduleSecondViewController.h */,
-				96A5952515847A6600E97FC7 /* BabyScheduleSecondViewController.m */,
 				96A5952715847A6600E97FC7 /* second.png */,
 				96A5952915847A6600E97FC7 /* second@2x.png */,
 				96A5950F15847A6600E97FC7 /* Supporting Files */,
@@ -166,6 +164,29 @@
 				96A5953A15847A6700E97FC7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96A5954815847F6B00E97FC7 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				96A5951715847A6600E97FC7 /* BabyScheduleAppDelegate.h */,
+				96A5951815847A6600E97FC7 /* BabyScheduleAppDelegate.m */,
+				96A5951A15847A6600E97FC7 /* MainStoryboard.storyboard */,
+				96A5951D15847A6600E97FC7 /* BabyScheduleFirstViewController.h */,
+				96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */,
+				96A5954D15848C7000E97FC7 /* BabyScheduleEventListViewController.h */,
+				96A5954E15848C7000E97FC7 /* BabyScheduleEventListViewController.m */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		96A5954915847F7600E97FC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96A5954A1584804600E97FC7 /* BabyScheduleEvent.h */,
+				96A5954B1584804600E97FC7 /* BabyScheduleEvent.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +303,8 @@
 				96A5951515847A6600E97FC7 /* main.m in Sources */,
 				96A5951915847A6600E97FC7 /* BabyScheduleAppDelegate.m in Sources */,
 				96A5951F15847A6600E97FC7 /* BabyScheduleFirstViewController.m in Sources */,
-				96A5952615847A6600E97FC7 /* BabyScheduleSecondViewController.m in Sources */,
+				96A5954C1584804600E97FC7 /* BabyScheduleEvent.m in Sources */,
+				96A5954F15848C7000E97FC7 /* BabyScheduleEventListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
