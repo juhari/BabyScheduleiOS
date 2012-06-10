@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96A5950915847A6600E97FC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950815847A6600E97FC7 /* UIKit.framework */; };
+		96A5950B15847A6600E97FC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950A15847A6600E97FC7 /* Foundation.framework */; };
+		96A5950D15847A6600E97FC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950C15847A6600E97FC7 /* CoreGraphics.framework */; };
+		96A5951315847A6600E97FC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96A5951115847A6600E97FC7 /* InfoPlist.strings */; };
+		96A5951515847A6600E97FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5951415847A6600E97FC7 /* main.m */; };
+		96A5951915847A6600E97FC7 /* BabyScheduleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5951815847A6600E97FC7 /* BabyScheduleAppDelegate.m */; };
+		96A5951C15847A6600E97FC7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A5951A15847A6600E97FC7 /* MainStoryboard.storyboard */; };
+		96A5951F15847A6600E97FC7 /* BabyScheduleFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */; };
+		96A5952115847A6600E97FC7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952015847A6600E97FC7 /* first.png */; };
+		96A5952315847A6600E97FC7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952215847A6600E97FC7 /* first@2x.png */; };
+		96A5952615847A6600E97FC7 /* BabyScheduleSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5952515847A6600E97FC7 /* BabyScheduleSecondViewController.m */; };
+		96A5952815847A6600E97FC7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952715847A6600E97FC7 /* second.png */; };
+		96A5952A15847A6600E97FC7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952915847A6600E97FC7 /* second@2x.png */; };
+		96A5953215847A6700E97FC7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5953115847A6700E97FC7 /* SenTestingKit.framework */; };
+		96A5953315847A6700E97FC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950815847A6600E97FC7 /* UIKit.framework */; };
+		96A5953415847A6700E97FC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950A15847A6600E97FC7 /* Foundation.framework */; };
+		96A5953C15847A6700E97FC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96A5953A15847A6700E97FC7 /* InfoPlist.strings */; };
+		96A5953F15847A6700E97FC7 /* BabyScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5953E15847A6700E97FC7 /* BabyScheduleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96A5953515847A6700E97FC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96A594FB15847A6400E97FC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96A5950315847A6600E97FC7;
+			remoteInfo = BabySchedule;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96A5950415847A6600E97FC7 /* BabySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A5950815847A6600E97FC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96A5950A15847A6600E97FC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96A5950C15847A6600E97FC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96A5951015847A6600E97FC7 /* BabySchedule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BabySchedule-Info.plist"; sourceTree = "<group>"; };
+		96A5951215847A6600E97FC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96A5951415847A6600E97FC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96A5951615847A6600E97FC7 /* BabySchedule-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabySchedule-Prefix.pch"; sourceTree = "<group>"; };
+		96A5951715847A6600E97FC7 /* BabyScheduleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyScheduleAppDelegate.h; sourceTree = "<group>"; };
+		96A5951815847A6600E97FC7 /* BabyScheduleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleAppDelegate.m; sourceTree = "<group>"; };
+		96A5951B15847A6600E97FC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		96A5951D15847A6600E97FC7 /* BabyScheduleFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyScheduleFirstViewController.h; sourceTree = "<group>"; };
+		96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleFirstViewController.m; sourceTree = "<group>"; };
+		96A5952015847A6600E97FC7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		96A5952215847A6600E97FC7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		96A5952415847A6600E97FC7 /* BabyScheduleSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyScheduleSecondViewController.h; sourceTree = "<group>"; };
+		96A5952515847A6600E97FC7 /* BabyScheduleSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleSecondViewController.m; sourceTree = "<group>"; };
+		96A5952715847A6600E97FC7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		96A5952915847A6600E97FC7 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		96A5953015847A6700E97FC7 /* BabyScheduleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyScheduleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A5953115847A6700E97FC7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		96A5953915847A6700E97FC7 /* BabyScheduleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BabyScheduleTests-Info.plist"; sourceTree = "<group>"; };
+		96A5953B15847A6700E97FC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96A5953D15847A6700E97FC7 /* BabyScheduleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyScheduleTests.h; sourceTree = "<group>"; };
+		96A5953E15847A6700E97FC7 /* BabyScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96A5950115847A6600E97FC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A5950915847A6600E97FC7 /* UIKit.framework in Frameworks */,
+				96A5950B15847A6600E97FC7 /* Foundation.framework in Frameworks */,
+				96A5950D15847A6600E97FC7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A5952C15847A6700E97FC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A5953215847A6700E97FC7 /* SenTestingKit.framework in Frameworks */,
+				96A5953315847A6700E97FC7 /* UIKit.framework in Frameworks */,
+				96A5953415847A6700E97FC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96A594F915847A6400E97FC7 = {
+			isa = PBXGroup;
+			children = (
+				96A5950E15847A6600E97FC7 /* BabySchedule */,
+				96A5953715847A6700E97FC7 /* BabyScheduleTests */,
+				96A5950715847A6600E97FC7 /* Frameworks */,
+				96A5950515847A6600E97FC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96A5950515847A6600E97FC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96A5950415847A6600E97FC7 /* BabySchedule.app */,
+				96A5953015847A6700E97FC7 /* BabyScheduleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96A5950715847A6600E97FC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96A5950815847A6600E97FC7 /* UIKit.framework */,
+				96A5950A15847A6600E97FC7 /* Foundation.framework */,
+				96A5950C15847A6600E97FC7 /* CoreGraphics.framework */,
+				96A5953115847A6700E97FC7 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96A5950E15847A6600E97FC7 /* BabySchedule */ = {
+			isa = PBXGroup;
+			children = (
+				96A5951715847A6600E97FC7 /* BabyScheduleAppDelegate.h */,
+				96A5951815847A6600E97FC7 /* BabyScheduleAppDelegate.m */,
+				96A5951A15847A6600E97FC7 /* MainStoryboard.storyboard */,
+				96A5951D15847A6600E97FC7 /* BabyScheduleFirstViewController.h */,
+				96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */,
+				96A5952015847A6600E97FC7 /* first.png */,
+				96A5952215847A6600E97FC7 /* first@2x.png */,
+				96A5952415847A6600E97FC7 /* BabyScheduleSecondViewController.h */,
+				96A5952515847A6600E97FC7 /* BabyScheduleSecondViewController.m */,
+				96A5952715847A6600E97FC7 /* second.png */,
+				96A5952915847A6600E97FC7 /* second@2x.png */,
+				96A5950F15847A6600E97FC7 /* Supporting Files */,
+			);
+			path = BabySchedule;
+			sourceTree = "<group>";
+		};
+		96A5950F15847A6600E97FC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96A5951015847A6600E97FC7 /* BabySchedule-Info.plist */,
+				96A5951115847A6600E97FC7 /* InfoPlist.strings */,
+				96A5951415847A6600E97FC7 /* main.m */,
+				96A5951615847A6600E97FC7 /* BabySchedule-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96A5953715847A6700E97FC7 /* BabyScheduleTests */ = {
+			isa = PBXGroup;
+			children = (
+				96A5953D15847A6700E97FC7 /* BabyScheduleTests.h */,
+				96A5953E15847A6700E97FC7 /* BabyScheduleTests.m */,
+				96A5953815847A6700E97FC7 /* Supporting Files */,
+			);
+			path = BabyScheduleTests;
+			sourceTree = "<group>";
+		};
+		96A5953815847A6700E97FC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96A5953915847A6700E97FC7 /* BabyScheduleTests-Info.plist */,
+				96A5953A15847A6700E97FC7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96A5950315847A6600E97FC7 /* BabySchedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A5954215847A6700E97FC7 /* Build configuration list for PBXNativeTarget "BabySchedule" */;
+			buildPhases = (
+				96A5950015847A6600E97FC7 /* Sources */,
+				96A5950115847A6600E97FC7 /* Frameworks */,
+				96A5950215847A6600E97FC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabySchedule;
+			productName = BabySchedule;
+			productReference = 96A5950415847A6600E97FC7 /* BabySchedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96A5952F15847A6700E97FC7 /* BabyScheduleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A5954515847A6700E97FC7 /* Build configuration list for PBXNativeTarget "BabyScheduleTests" */;
+			buildPhases = (
+				96A5952B15847A6700E97FC7 /* Sources */,
+				96A5952C15847A6700E97FC7 /* Frameworks */,
+				96A5952D15847A6700E97FC7 /* Resources */,
+				96A5952E15847A6700E97FC7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96A5953615847A6700E97FC7 /* PBXTargetDependency */,
+			);
+			name = BabyScheduleTests;
+			productName = BabyScheduleTests;
+			productReference = 96A5953015847A6700E97FC7 /* BabyScheduleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96A594FB15847A6400E97FC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BabySchedule;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 96A594FE15847A6400E97FC7 /* Build configuration list for PBXProject "BabySchedule" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96A594F915847A6400E97FC7;
+			productRefGroup = 96A5950515847A6600E97FC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96A5950315847A6600E97FC7 /* BabySchedule */,
+				96A5952F15847A6700E97FC7 /* BabyScheduleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96A5950215847A6600E97FC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A5951315847A6600E97FC7 /* InfoPlist.strings in Resources */,
+				96A5951C15847A6600E97FC7 /* MainStoryboard.storyboard in Resources */,
+				96A5952115847A6600E97FC7 /* first.png in Resources */,
+				96A5952315847A6600E97FC7 /* first@2x.png in Resources */,
+				96A5952815847A6600E97FC7 /* second.png in Resources */,
+				96A5952A15847A6600E97FC7 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A5952D15847A6700E97FC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A5953C15847A6700E97FC7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96A5952E15847A6700E97FC7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96A5950015847A6600E97FC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A5951515847A6600E97FC7 /* main.m in Sources */,
+				96A5951915847A6600E97FC7 /* BabyScheduleAppDelegate.m in Sources */,
+				96A5951F15847A6600E97FC7 /* BabyScheduleFirstViewController.m in Sources */,
+				96A5952615847A6600E97FC7 /* BabyScheduleSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A5952B15847A6700E97FC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A5953F15847A6700E97FC7 /* BabyScheduleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96A5953615847A6700E97FC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96A5950315847A6600E97FC7 /* BabySchedule */;
+			targetProxy = 96A5953515847A6700E97FC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96A5951115847A6600E97FC7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96A5951215847A6600E97FC7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96A5951A15847A6600E97FC7 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96A5951B15847A6600E97FC7 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		96A5953A15847A6700E97FC7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96A5953B15847A6700E97FC7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96A5954015847A6700E97FC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96A5954115847A6700E97FC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96A5954315847A6700E97FC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BabySchedule/BabySchedule-Prefix.pch";
+				INFOPLIST_FILE = "BabySchedule/BabySchedule-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96A5954415847A6700E97FC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BabySchedule/BabySchedule-Prefix.pch";
+				INFOPLIST_FILE = "BabySchedule/BabySchedule-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		96A5954615847A6700E97FC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BabySchedule.app/BabySchedule";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BabySchedule/BabySchedule-Prefix.pch";
+				INFOPLIST_FILE = "BabyScheduleTests/BabyScheduleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		96A5954715847A6700E97FC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BabySchedule.app/BabySchedule";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BabySchedule/BabySchedule-Prefix.pch";
+				INFOPLIST_FILE = "BabyScheduleTests/BabyScheduleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96A594FE15847A6400E97FC7 /* Build configuration list for PBXProject "BabySchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A5954015847A6700E97FC7 /* Debug */,
+				96A5954115847A6700E97FC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A5954215847A6700E97FC7 /* Build configuration list for PBXNativeTarget "BabySchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A5954315847A6700E97FC7 /* Debug */,
+				96A5954415847A6700E97FC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96A5954515847A6700E97FC7 /* Build configuration list for PBXNativeTarget "BabyScheduleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A5954615847A6700E97FC7 /* Debug */,
+				96A5954715847A6700E97FC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96A594FB15847A6400E97FC7 /* Project object */;
+}
