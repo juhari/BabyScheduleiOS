@@ -10,6 +10,8 @@
 
 @interface BabyScheduleEventMarkingListViewController : UITableViewController
 
-@property (strong) NSMutableArray *eventsToMark;
+@property (assign) NSMutableArray *eventsToMark;
+@property (strong) NSMutableArray *sleepEvents;
+@property (strong) NSMutableArray *wakeEvents;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "BabyScheduleEventMarkingListViewController.h"
 #import "BabyScheduleEvent.h"
+#import "BabyScheduleEventTypes.h"
 
 @interface BabyScheduleEventMarkingListViewController ()
 
@@ -15,11 +16,15 @@
 
 @implementation BabyScheduleEventMarkingListViewController
 
+@synthesize eventsToMark = _eventsToMark;
+@synthesize sleepEvents = _sleepEvents;
+@synthesize wakeEvents = _wakeEvents;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -27,7 +32,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    NSDate* now = [NSDate date];
+    
+    BabyScheduleEvent *sleepEvent = [[BabyScheduleEvent alloc] init:GO_TO_SLEEP_NAME date:now];
+    BabyScheduleEvent *wakeEvent = [[BabyScheduleEvent alloc] init:WAKE_UP_NAME date:now];
+    BabyScheduleEvent *milkEvent = [[BabyScheduleEvent alloc] init:MILK_NAME date:now];
+    BabyScheduleEvent *nursingEvent = [[BabyScheduleEvent alloc] init:NURSING_NAME date:now];
+    
+    self.wakeEvents = [NSMutableArray arrayWithObjects:sleepEvent, milkEvent, nursingEvent, nil];
+    self.sleepEvents = [NSMutableArray arrayWithObjects:wakeEvent, milkEvent, nursingEvent, nil];
+    
+    self.eventsToMark = self.wakeEvents;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -51,24 +68,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_eventsToMark count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"BasicMarkingCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
+    BabyScheduleEvent *event = [self.eventsToMark objectAtIndex:indexPath.row];
+    cell.textLabel.text = event.name;
+    
     
     return cell;
 }

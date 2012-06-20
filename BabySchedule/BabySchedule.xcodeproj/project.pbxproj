@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		968C21D91591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C21D81591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m */; };
+		968C21DD1591F04A00CCF055 /* BabyScheduleEventTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C21DC1591F04A00CCF055 /* BabyScheduleEventTypes.m */; };
+		968C21E11591F66200CCF055 /* BabyScheduleDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C21E01591F66200CCF055 /* BabyScheduleDataStorage.m */; };
 		96A5950915847A6600E97FC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950815847A6600E97FC7 /* UIKit.framework */; };
 		96A5950B15847A6600E97FC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950A15847A6600E97FC7 /* Foundation.framework */; };
 		96A5950D15847A6600E97FC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950C15847A6600E97FC7 /* CoreGraphics.framework */; };
@@ -41,6 +43,10 @@
 /* Begin PBXFileReference section */
 		968C21D71591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleEventMarkingListViewController.h; sourceTree = "<group>"; };
 		968C21D81591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleEventMarkingListViewController.m; sourceTree = "<group>"; };
+		968C21DB1591F04A00CCF055 /* BabyScheduleEventTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleEventTypes.h; sourceTree = "<group>"; };
+		968C21DC1591F04A00CCF055 /* BabyScheduleEventTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleEventTypes.m; sourceTree = "<group>"; };
+		968C21DF1591F66200CCF055 /* BabyScheduleDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleDataStorage.h; sourceTree = "<group>"; };
+		968C21E01591F66200CCF055 /* BabyScheduleDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleDataStorage.m; sourceTree = "<group>"; };
 		96A5950415847A6600E97FC7 /* BabySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A5950815847A6600E97FC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96A5950A15847A6600E97FC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		968C21DE1591F64900CCF055 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				968C21DF1591F66200CCF055 /* BabyScheduleDataStorage.h */,
+				968C21E01591F66200CCF055 /* BabyScheduleDataStorage.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		96A594F915847A6400E97FC7 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +140,7 @@
 		96A5950E15847A6600E97FC7 /* BabySchedule */ = {
 			isa = PBXGroup;
 			children = (
+				968C21DE1591F64900CCF055 /* Data */,
 				96A5954915847F7600E97FC7 /* Model */,
 				96A5954815847F6B00E97FC7 /* GUI */,
 				96A5952015847A6600E97FC7 /* first.png */,
@@ -185,6 +201,8 @@
 			children = (
 				96A5954A1584804600E97FC7 /* BabyScheduleEvent.h */,
 				96A5954B1584804600E97FC7 /* BabyScheduleEvent.m */,
+				968C21DB1591F04A00CCF055 /* BabyScheduleEventTypes.h */,
+				968C21DC1591F04A00CCF055 /* BabyScheduleEventTypes.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -305,6 +323,8 @@
 				96A5954C1584804600E97FC7 /* BabyScheduleEvent.m in Sources */,
 				96A5954F15848C7000E97FC7 /* BabyScheduleEventListViewController.m in Sources */,
 				968C21D91591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m in Sources */,
+				968C21DD1591F04A00CCF055 /* BabyScheduleEventTypes.m in Sources */,
+				968C21E11591F66200CCF055 /* BabyScheduleDataStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
