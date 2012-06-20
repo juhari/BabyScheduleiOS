@@ -1,21 +1,19 @@
 //
-//  BabyScheduleEventListViewController.m
+//  BabyScheduleEventMarkingListControllerViewController.m
 //  BabySchedule
 //
-//  Created by Juha Riippi on 10.6.2012.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Juha Riippi on 6/20/12.
+//  Copyright (c) 2012 Vincit Oy. All rights reserved.
 //
 
-#import "BabyScheduleEventListViewController.h"
+#import "BabyScheduleEventMarkingListViewController.h"
 #import "BabyScheduleEvent.h"
 
-@interface BabyScheduleEventListViewController ()
+@interface BabyScheduleEventMarkingListViewController ()
 
 @end
 
-@implementation BabyScheduleEventListViewController
-
-@synthesize events = _events;
+@implementation BabyScheduleEventMarkingListViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,9 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Event list";
 
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -55,25 +51,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return _events.count;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return _events.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"BasicEventCell";
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    BabyScheduleEvent *event = [self.events objectAtIndex:indexPath.row];
-    cell.textLabel.text = event.name;
-    
     
     return cell;
 }

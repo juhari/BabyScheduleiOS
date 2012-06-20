@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		968C21D91591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C21D81591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m */; };
 		96A5950915847A6600E97FC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950815847A6600E97FC7 /* UIKit.framework */; };
 		96A5950B15847A6600E97FC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950A15847A6600E97FC7 /* Foundation.framework */; };
 		96A5950D15847A6600E97FC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A5950C15847A6600E97FC7 /* CoreGraphics.framework */; };
@@ -14,7 +15,6 @@
 		96A5951515847A6600E97FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5951415847A6600E97FC7 /* main.m */; };
 		96A5951915847A6600E97FC7 /* BabyScheduleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5951815847A6600E97FC7 /* BabyScheduleAppDelegate.m */; };
 		96A5951C15847A6600E97FC7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A5951A15847A6600E97FC7 /* MainStoryboard.storyboard */; };
-		96A5951F15847A6600E97FC7 /* BabyScheduleFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */; };
 		96A5952115847A6600E97FC7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952015847A6600E97FC7 /* first.png */; };
 		96A5952315847A6600E97FC7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952215847A6600E97FC7 /* first@2x.png */; };
 		96A5952815847A6600E97FC7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5952715847A6600E97FC7 /* second.png */; };
@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		968C21D71591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleEventMarkingListViewController.h; sourceTree = "<group>"; };
+		968C21D81591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleEventMarkingListViewController.m; sourceTree = "<group>"; };
 		96A5950415847A6600E97FC7 /* BabySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A5950815847A6600E97FC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96A5950A15847A6600E97FC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +52,6 @@
 		96A5951715847A6600E97FC7 /* BabyScheduleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyScheduleAppDelegate.h; sourceTree = "<group>"; };
 		96A5951815847A6600E97FC7 /* BabyScheduleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleAppDelegate.m; sourceTree = "<group>"; };
 		96A5951B15847A6600E97FC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		96A5951D15847A6600E97FC7 /* BabyScheduleFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyScheduleFirstViewController.h; sourceTree = "<group>"; };
-		96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleFirstViewController.m; sourceTree = "<group>"; };
 		96A5952015847A6600E97FC7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		96A5952215847A6600E97FC7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		96A5952715847A6600E97FC7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
@@ -172,10 +172,10 @@
 				96A5951715847A6600E97FC7 /* BabyScheduleAppDelegate.h */,
 				96A5951815847A6600E97FC7 /* BabyScheduleAppDelegate.m */,
 				96A5951A15847A6600E97FC7 /* MainStoryboard.storyboard */,
-				96A5951D15847A6600E97FC7 /* BabyScheduleFirstViewController.h */,
-				96A5951E15847A6600E97FC7 /* BabyScheduleFirstViewController.m */,
 				96A5954D15848C7000E97FC7 /* BabyScheduleEventListViewController.h */,
 				96A5954E15848C7000E97FC7 /* BabyScheduleEventListViewController.m */,
+				968C21D71591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.h */,
+				968C21D81591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -302,9 +302,9 @@
 			files = (
 				96A5951515847A6600E97FC7 /* main.m in Sources */,
 				96A5951915847A6600E97FC7 /* BabyScheduleAppDelegate.m in Sources */,
-				96A5951F15847A6600E97FC7 /* BabyScheduleFirstViewController.m in Sources */,
 				96A5954C1584804600E97FC7 /* BabyScheduleEvent.m in Sources */,
 				96A5954F15848C7000E97FC7 /* BabyScheduleEventListViewController.m in Sources */,
+				968C21D91591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +474,7 @@
 				96A5954415847A6700E97FC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96A5954515847A6700E97FC7 /* Build configuration list for PBXNativeTarget "BabyScheduleTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +483,7 @@
 				96A5954715847A6700E97FC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
