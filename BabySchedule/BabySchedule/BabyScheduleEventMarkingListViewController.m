@@ -92,6 +92,16 @@
     return cell;
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"AddEvent"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        BabyScheduleAddEventViewController *addEventController = [[navigationController viewControllers] objectAtIndex:0];
+        addEventController.delegate = self;
+    }
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,10 +147,22 @@
 {
     // Navigation logic may go here. Create and push another view controller.
    
-     BabyScheduleAddEventViewController *detailViewController = [[BabyScheduleAddEventViewController alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
+//     BabyScheduleAddEventViewController *detailViewController = [[BabyScheduleAddEventViewController alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+//     // ...
+//     // Pass the selected object to the new view controller.
+//     [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+#pragma mark - BabyScheduleAddEventViewControllerDelegate
+
+- (void) babyScheduleAddEventViewControllerDidCancel:(BabyScheduleAddEventViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) babyScheduleAddEventViewControllerDidSave:(BabyScheduleAddEventViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

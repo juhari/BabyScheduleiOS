@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BabyScheduleAddEventViewController.h"
 
-@interface BabyScheduleEventMarkingListViewController : UITableViewController
+@interface BabyScheduleEventMarkingListViewController : UITableViewController <BabyScheduleAddEventViewControllerDelegate>
 
 @property (assign) NSMutableArray *eventsToMark;
 @property (strong) NSMutableArray *sleepEvents;

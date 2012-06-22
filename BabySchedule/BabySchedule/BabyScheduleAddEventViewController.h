@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class BabyScheduleAddEventViewController;
+
+@protocol BabyScheduleAddEventViewControllerDelegate <NSObject>
+-(void)babyScheduleAddEventViewControllerDidCancel: (BabyScheduleAddEventViewController *)controller;
+-(void)babyScheduleAddEventViewControllerDidSave: (BabyScheduleAddEventViewController *)controller;
+
+@end
+
 @interface BabyScheduleAddEventViewController : UIViewController
+
+@property (nonatomic, weak) id <BabyScheduleAddEventViewControllerDelegate> delegate;
+@property (strong, nonatomic) NSArray *eventNames;
+
+-(IBAction)cancel:(id)sender;
+-(IBAction)done:(id)sender;
 
 @end
