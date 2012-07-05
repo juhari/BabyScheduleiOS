@@ -15,8 +15,7 @@
 
 @implementation BabyScheduleAddEventViewController
 
-@synthesize eventNames = _eventNames;
-@synthesize delegate;
+@synthesize delegate, eventTypePicker, resultLabel, segmentControl, datePicker;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,11 +29,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
-    self.eventNames = [[NSArray alloc] initWithObjects:
-                         GO_TO_SLEEP_NAME, WAKE_UP_NAME, MILK_NAME, NURSING_NAME, nil];
+    // set maximum date of datepicker to current time
+    NSDate* now = [NSDate date];
+    [datePicker setMaximumDate:now];
+    
+    // format resultLabel text
+    [self updateResultLabel];    
 
+	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidUnload
@@ -48,6 +51,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
++(NSString*)timeAsString:(NSDate*)date
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"HH:mm dd/MM/yyyy"];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    return dateString;
+}
+                                                                               
 - (IBAction)cancel:(id)sender
 {
     [self.delegate babyScheduleAddEventViewControllerDidCancel:self];
@@ -56,6 +67,42 @@
 - (IBAction)done:(id)sender
 {
     [self.delegate babyScheduleAddEventViewControllerDidSave:self];
+}
+
+-(IBAction)textFieldReturn:(id)sender
+{
+    [sender resignFirstResponder];
+}
+
+-(IBAction)segmentChanged:(id)sender
+{
+    if( [segmentControl selectedSegmentIndex] == 0 )
+    {
+        [eventTypePicker setHidden:false];
+        [datePicker setHidden:true];
+    }
+    else 
+    {
+        [eventTypePicker setHidden:true];    
+        [datePicker setHidden:false];
+    }
+    
+}
+
+-(IBAction)dateChanged:(id)sender
+{
+    // format resultLabel text
+    [self updateResultLabel];
+}
+
+-(void)updateResultLabel
+{
+    NSString* eventString = [[BabyScheduleEventTypes allEvents] objectAtIndex:[eventTypePicker selectedRowInComponent:0]];
+    NSDate* selectedDate = [datePicker date];
+    NSString* selectedDateString = [BabyScheduleAddEventViewController timeAsString:selectedDate];
+    eventString = [eventString stringByAppendingString:@" "];
+    eventString = [eventString stringByAppendingString:selectedDateString]; 
+    resultLabel.text = eventString;
 }
 
 #pragma mark -
@@ -69,13 +116,13 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
-    return [_eventNames count];
+    return [[BabyScheduleEventTypes allEvents] count];
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
-    return [_eventNames objectAtIndex:row];
+    return [[BabyScheduleEventTypes allEvents] objectAtIndex:row];
 } 
 
 #pragma mark -
@@ -83,7 +130,7 @@ numberOfRowsInComponent:(NSInteger)component
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
-    // nothing to do yet
+    // format resultLabel text
+    [self updateResultLabel];
 }
-
 @end

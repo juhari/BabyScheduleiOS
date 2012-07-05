@@ -16,12 +16,27 @@
 
 @end
 
-@interface BabyScheduleAddEventViewController : UIViewController
+@interface BabyScheduleAddEventViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> 
+{
+    UIPickerView       *eventTypePicker;
+    UILabel            *resultLabel;
+    UISegmentedControl *segmentControl;
+    UIDatePicker       *datePicker;
+}
 
 @property (nonatomic, weak) id <BabyScheduleAddEventViewControllerDelegate> delegate;
-@property (strong, nonatomic) NSArray *eventNames;
+@property (strong, nonatomic) IBOutlet UIPickerView *eventTypePicker;
+@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 -(IBAction)cancel:(id)sender;
 -(IBAction)done:(id)sender;
+-(IBAction)segmentChanged:(id)sender;
+-(IBAction)textFieldReturn:(id)sender;
+-(IBAction)dateChanged:(id)sender;
+
++(NSString*)timeAsString:(NSDate*)date;
+-(void)updateResultLabel;
 
 @end
