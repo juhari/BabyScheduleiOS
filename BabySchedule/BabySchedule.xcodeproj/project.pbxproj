@@ -38,7 +38,6 @@
 		96AD6DEF15A6D8D600C60D4B /* ic_tab_show_events_white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DDF15A6D8D600C60D4B /* ic_tab_show_events_white.jpg */; };
 		96AD6DF015A6D8D600C60D4B /* icon_diaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE015A6D8D600C60D4B /* icon_diaper.png */; };
 		96AD6DF115A6D8D600C60D4B /* icon_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE115A6D8D600C60D4B /* icon_empty.png */; };
-		96AD6DF215A6D8D600C60D4B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE215A6D8D600C60D4B /* icon.png */; };
 		96AD6DF315A6D8D600C60D4B /* milk_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE315A6D8D600C60D4B /* milk_icon.png */; };
 		96AD6DF415A6D8D600C60D4B /* milk_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE415A6D8D600C60D4B /* milk_large.png */; };
 		96AD6DF515A6D8D600C60D4B /* new_mark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE515A6D8D600C60D4B /* new_mark_icon.png */; };
@@ -46,6 +45,10 @@
 		96AD6DF715A6D8D600C60D4B /* nurse_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE715A6D8D600C60D4B /* nurse_icon.png */; };
 		96AD6DF815A6D8D600C60D4B /* potty_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE815A6D8D600C60D4B /* potty_icon.png */; };
 		96AD6DF915A6D8D600C60D4B /* sleep_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DE915A6D8D600C60D4B /* sleep_icon.png */; };
+		96AD6DFD15A6DF1F00C60D4B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DFC15A6DF1F00C60D4B /* Icon.png */; };
+		96AD6DFF15A6E10500C60D4B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6DFE15A6E10500C60D4B /* Icon.png */; };
+		96AD6E0115A6E18700C60D4B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6E0015A6E18700C60D4B /* Icon@2x.png */; };
+		96AD6E0315A6E18D00C60D4B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6E0215A6E18D00C60D4B /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +105,6 @@
 		96AD6DDF15A6D8D600C60D4B /* ic_tab_show_events_white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ic_tab_show_events_white.jpg; path = Graphics/ic_tab_show_events_white.jpg; sourceTree = "<group>"; };
 		96AD6DE015A6D8D600C60D4B /* icon_diaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_diaper.png; path = Graphics/icon_diaper.png; sourceTree = "<group>"; };
 		96AD6DE115A6D8D600C60D4B /* icon_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_empty.png; path = Graphics/icon_empty.png; sourceTree = "<group>"; };
-		96AD6DE215A6D8D600C60D4B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Graphics/icon.png; sourceTree = "<group>"; };
 		96AD6DE315A6D8D600C60D4B /* milk_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = milk_icon.png; path = Graphics/milk_icon.png; sourceTree = "<group>"; };
 		96AD6DE415A6D8D600C60D4B /* milk_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = milk_large.png; path = Graphics/milk_large.png; sourceTree = "<group>"; };
 		96AD6DE515A6D8D600C60D4B /* new_mark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = new_mark_icon.png; path = Graphics/new_mark_icon.png; sourceTree = "<group>"; };
@@ -110,6 +112,10 @@
 		96AD6DE715A6D8D600C60D4B /* nurse_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nurse_icon.png; path = Graphics/nurse_icon.png; sourceTree = "<group>"; };
 		96AD6DE815A6D8D600C60D4B /* potty_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = potty_icon.png; path = Graphics/potty_icon.png; sourceTree = "<group>"; };
 		96AD6DE915A6D8D600C60D4B /* sleep_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sleep_icon.png; path = Graphics/sleep_icon.png; sourceTree = "<group>"; };
+		96AD6DFC15A6DF1F00C60D4B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Graphics/Icon.png; sourceTree = "<group>"; };
+		96AD6DFE15A6E10500C60D4B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		96AD6E0015A6E18700C60D4B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Graphics/Icon@2x.png"; sourceTree = "<group>"; };
+		96AD6E0215A6E18D00C60D4B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,8 @@
 		96A594F915847A6400E97FC7 = {
 			isa = PBXGroup;
 			children = (
+				96AD6E0215A6E18D00C60D4B /* Icon@2x.png */,
+				96AD6DFE15A6E10500C60D4B /* Icon.png */,
 				96A5950E15847A6600E97FC7 /* BabySchedule */,
 				96A5953715847A6700E97FC7 /* BabyScheduleTests */,
 				96A5950715847A6600E97FC7 /* Frameworks */,
@@ -178,7 +186,7 @@
 		96A5950E15847A6600E97FC7 /* BabySchedule */ = {
 			isa = PBXGroup;
 			children = (
-				96AD6D8C15A6D7B400C60D4B /* Graphics */,
+				96AD6DFB15A6D9C800C60D4B /* Resources */,
 				96AD6D8715A6D0F200C60D4B /* Utils */,
 				968C21DE1591F64900CCF055 /* Data */,
 				96A5954915847F7600E97FC7 /* Model */,
@@ -258,9 +266,11 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		96AD6D8C15A6D7B400C60D4B /* Graphics */ = {
+		96AD6DFB15A6D9C800C60D4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				96AD6E0015A6E18700C60D4B /* Icon@2x.png */,
+				96AD6DFC15A6DF1F00C60D4B /* Icon.png */,
 				96AD6DDA15A6D8D600C60D4B /* bath_icon.png */,
 				96AD6DDB15A6D8D600C60D4B /* eat_icon.png */,
 				96AD6DDC15A6D8D600C60D4B /* ic_tab_mark_events_gray.jpg */,
@@ -269,7 +279,6 @@
 				96AD6DDF15A6D8D600C60D4B /* ic_tab_show_events_white.jpg */,
 				96AD6DE015A6D8D600C60D4B /* icon_diaper.png */,
 				96AD6DE115A6D8D600C60D4B /* icon_empty.png */,
-				96AD6DE215A6D8D600C60D4B /* icon.png */,
 				96AD6DE315A6D8D600C60D4B /* milk_icon.png */,
 				96AD6DE415A6D8D600C60D4B /* milk_large.png */,
 				96AD6DE515A6D8D600C60D4B /* new_mark_icon.png */,
@@ -278,7 +287,7 @@
 				96AD6DE815A6D8D600C60D4B /* potty_icon.png */,
 				96AD6DE915A6D8D600C60D4B /* sleep_icon.png */,
 			);
-			name = Graphics;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +375,6 @@
 				96AD6DEF15A6D8D600C60D4B /* ic_tab_show_events_white.jpg in Resources */,
 				96AD6DF015A6D8D600C60D4B /* icon_diaper.png in Resources */,
 				96AD6DF115A6D8D600C60D4B /* icon_empty.png in Resources */,
-				96AD6DF215A6D8D600C60D4B /* icon.png in Resources */,
 				96AD6DF315A6D8D600C60D4B /* milk_icon.png in Resources */,
 				96AD6DF415A6D8D600C60D4B /* milk_large.png in Resources */,
 				96AD6DF515A6D8D600C60D4B /* new_mark_icon.png in Resources */,
@@ -374,6 +382,10 @@
 				96AD6DF715A6D8D600C60D4B /* nurse_icon.png in Resources */,
 				96AD6DF815A6D8D600C60D4B /* potty_icon.png in Resources */,
 				96AD6DF915A6D8D600C60D4B /* sleep_icon.png in Resources */,
+				96AD6DFD15A6DF1F00C60D4B /* Icon.png in Resources */,
+				96AD6DFF15A6E10500C60D4B /* Icon.png in Resources */,
+				96AD6E0115A6E18700C60D4B /* Icon@2x.png in Resources */,
+				96AD6E0315A6E18D00C60D4B /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
