@@ -29,6 +29,7 @@
 		96A5953F15847A6700E97FC7 /* BabyScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5953E15847A6700E97FC7 /* BabyScheduleTests.m */; };
 		96A5954C1584804600E97FC7 /* BabyScheduleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5954B1584804600E97FC7 /* BabyScheduleEvent.m */; };
 		96A5954F15848C7000E97FC7 /* BabyScheduleEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5954E15848C7000E97FC7 /* BabyScheduleEventListViewController.m */; };
+		96AD6D8B15A6D11700C60D4B /* BabyScheduleUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AD6D8A15A6D11600C60D4B /* BabyScheduleUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		96A5954B1584804600E97FC7 /* BabyScheduleEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleEvent.m; sourceTree = "<group>"; };
 		96A5954D15848C7000E97FC7 /* BabyScheduleEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleEventListViewController.h; sourceTree = "<group>"; };
 		96A5954E15848C7000E97FC7 /* BabyScheduleEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleEventListViewController.m; sourceTree = "<group>"; };
+		96AD6D8915A6D11600C60D4B /* BabyScheduleUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleUtils.h; sourceTree = "<group>"; };
+		96AD6D8A15A6D11600C60D4B /* BabyScheduleUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 		96A5950E15847A6600E97FC7 /* BabySchedule */ = {
 			isa = PBXGroup;
 			children = (
+				96AD6D8715A6D0F200C60D4B /* Utils */,
 				968C21DE1591F64900CCF055 /* Data */,
 				96A5954915847F7600E97FC7 /* Model */,
 				96A5954815847F6B00E97FC7 /* GUI */,
@@ -210,6 +214,15 @@
 				968C21DC1591F04A00CCF055 /* BabyScheduleEventTypes.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		96AD6D8715A6D0F200C60D4B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				96AD6D8915A6D11600C60D4B /* BabyScheduleUtils.h */,
+				96AD6D8A15A6D11600C60D4B /* BabyScheduleUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +344,7 @@
 				968C21DD1591F04A00CCF055 /* BabyScheduleEventTypes.m in Sources */,
 				968C21E11591F66200CCF055 /* BabyScheduleDataStorage.m in Sources */,
 				968C21E4159326DD00CCF055 /* BabyScheduleAddEventViewController.m in Sources */,
+				96AD6D8B15A6D11700C60D4B /* BabyScheduleUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

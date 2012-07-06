@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "BabyScheduleEvent.h"
 
-@interface BabyScheduleDataStorage : NSObject
-
-@property (strong, readonly) NSMutableArray* allEventsList;
+@interface BabyScheduleDataStorage : NSObject 
+{
+    NSMutableArray *allEventsList;
+}
 
 +(BabyScheduleDataStorage*)getInstance;
 -(void)insertEvent:(BabyScheduleEvent*)eventToAdd;
+-(NSMutableArray*)allEvents;
 
 @end

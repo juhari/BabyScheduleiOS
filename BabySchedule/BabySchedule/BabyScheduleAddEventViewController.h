@@ -36,7 +36,6 @@
 -(IBAction)textFieldReturn:(id)sender;
 -(IBAction)dateChanged:(id)sender;
 
-+(NSString*)timeAsString:(NSDate*)date;
 -(void)updateResultLabel;
 
 @end

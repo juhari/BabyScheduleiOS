@@ -12,8 +12,6 @@
 
 static BabyScheduleDataStorage* _sharedInstance = nil;
 
-@synthesize allEventsList = _allEventsList;
-
 +(BabyScheduleDataStorage*)getInstance {
     @synchronized([BabyScheduleDataStorage class]) {
         if( !_sharedInstance) {
@@ -38,11 +36,17 @@ static BabyScheduleDataStorage* _sharedInstance = nil;
 
 -(id)init {
     self = [super init];
+    allEventsList = [[NSMutableArray alloc] init];
     return self;
 }
 
 -(void)insertEvent:(BabyScheduleEvent *)eventToAdd {
-    [_allEventsList addObject:(eventToAdd)];
+    [allEventsList addObject:(eventToAdd)];
+}
+
+-(NSMutableArray*)allEvents
+{
+    return allEventsList;
 }
 
 @end

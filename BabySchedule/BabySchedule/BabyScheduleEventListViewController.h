@@ -10,6 +10,4 @@
 
 @interface BabyScheduleEventListViewController : UITableViewController
 
-@property (strong) NSMutableArray *events;
-
 @end

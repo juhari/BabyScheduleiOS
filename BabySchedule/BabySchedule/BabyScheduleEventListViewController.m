@@ -8,14 +8,14 @@
 
 #import "BabyScheduleEventListViewController.h"
 #import "BabyScheduleEvent.h"
+#import "BabyScheduleDataStorage.h"
+#import "BabyScheduleUtils.h"
 
 @interface BabyScheduleEventListViewController ()
 
 @end
 
 @implementation BabyScheduleEventListViewController
-
-@synthesize events = _events;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,12 +31,16 @@
     [super viewDidLoad];
     self.title = @"Event list";
 
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
 }
 
 - (void)viewDidUnload
@@ -62,7 +66,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_events count];
+    BabyScheduleDataStorage *storage = [BabyScheduleDataStorage getInstance];
+    return [[storage allEvents] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,9 +76,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    BabyScheduleEvent *event = [self.events objectAtIndex:indexPath.row];
+    BabyScheduleDataStorage *storage = [BabyScheduleDataStorage getInstance];
+    BabyScheduleEvent *event = [[storage allEvents] objectAtIndex:indexPath.row];
     cell.textLabel.text = event.name;
-    
+    cell.detailTextLabel.text = [BabyScheduleUtils timeAsString:[event date]];
     
     return cell;
 }

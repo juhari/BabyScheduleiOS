@@ -8,6 +8,9 @@
 
 #import "BabyScheduleAddEventViewController.h"
 #import "BabyScheduleEventTypes.h"
+#import "BabyScheduleEvent.h"
+#import "BabyScheduleDataStorage.h"
+#import "BabyScheduleUtils.h"
 
 @interface BabyScheduleAddEventViewController ()
 
@@ -51,14 +54,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-+(NSString*)timeAsString:(NSDate*)date
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-    [dateFormat setDateFormat:@"HH:mm dd/MM/yyyy"];
-    NSString *dateString = [dateFormat stringFromDate:date];
-    return dateString;
-}
-                                                                               
 - (IBAction)cancel:(id)sender
 {
     [self.delegate babyScheduleAddEventViewControllerDidCancel:self];
@@ -66,6 +61,12 @@
 
 - (IBAction)done:(id)sender
 {
+    NSString *name = [[BabyScheduleEventTypes allEvents] objectAtIndex:[eventTypePicker selectedRowInComponent:0]];
+    NSDate *date = [datePicker date];
+    BabyScheduleEvent *event = [[BabyScheduleEvent alloc] init:name date:date];
+    BabyScheduleDataStorage *storage = [BabyScheduleDataStorage getInstance];
+    [storage insertEvent:event];
+    
     [self.delegate babyScheduleAddEventViewControllerDidSave:self];
 }
 
@@ -99,7 +100,7 @@
 {
     NSString* eventString = [[BabyScheduleEventTypes allEvents] objectAtIndex:[eventTypePicker selectedRowInComponent:0]];
     NSDate* selectedDate = [datePicker date];
-    NSString* selectedDateString = [BabyScheduleAddEventViewController timeAsString:selectedDate];
+    NSString* selectedDateString = [BabyScheduleUtils timeAsString:selectedDate];
     eventString = [eventString stringByAppendingString:@" "];
     eventString = [eventString stringByAppendingString:selectedDateString]; 
     resultLabel.text = eventString;
