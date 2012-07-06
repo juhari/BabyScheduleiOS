@@ -29,6 +29,11 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [eventTypePicker selectRow:selectedEventIndex inComponent:0 animated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,7 +44,7 @@
     
     // format resultLabel text
     [self updateResultLabel];    
-
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -104,6 +109,11 @@
     eventString = [eventString stringByAppendingString:@" "];
     eventString = [eventString stringByAppendingString:selectedDateString]; 
     resultLabel.text = eventString;
+}
+
+-(void)setPickerViewSelectedValue:(NSString*)value
+{
+    selectedEventIndex = [[BabyScheduleEventTypes allEvents] indexOfObjectIdenticalTo:value];
 }
 
 #pragma mark -

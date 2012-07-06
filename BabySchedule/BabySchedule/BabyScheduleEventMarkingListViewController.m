@@ -100,6 +100,15 @@
         BabyScheduleAddEventViewController *addEventController = [[navigationController viewControllers] objectAtIndex:0];
         addEventController.delegate = self;
     }
+    else if([segue.identifier isEqualToString:@"AddEventFromTable"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        BabyScheduleAddEventViewController *addEventController = [[navigationController viewControllers] objectAtIndex:0];
+        addEventController.delegate = self;
+        
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
+        [addEventController setPickerViewSelectedValue:cell.textLabel.text];
+    }
 }
 
 /*
@@ -146,11 +155,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-   
-//     BabyScheduleAddEventViewController *detailViewController = [[BabyScheduleAddEventViewController alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-//     // ...
-//     // Pass the selected object to the new view controller.
-//     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 #pragma mark - BabyScheduleAddEventViewControllerDelegate

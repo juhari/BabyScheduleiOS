@@ -22,6 +22,7 @@
     UILabel            *resultLabel;
     UISegmentedControl *segmentControl;
     UIDatePicker       *datePicker;
+    int                selectedEventIndex;
 }
 
 @property (nonatomic, weak) id <BabyScheduleAddEventViewControllerDelegate> delegate;
@@ -37,5 +38,6 @@
 -(IBAction)dateChanged:(id)sender;
 
 -(void)updateResultLabel;
+-(void)setPickerViewSelectedValue:(NSString*)value;
 
 @end
