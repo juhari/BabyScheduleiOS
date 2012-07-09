@@ -74,50 +74,77 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set additional value" minimumFontSize="17" id="Jtw-Th-CoV">
-                                <rect key="frame" x="20" y="312" width="280" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set start time" minimumFontSize="17" id="Jtw-Th-CoV">
+                                <rect key="frame" x="20" y="271" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                <connections>
-                                    <action selector="textFieldReturn:" destination="mEk-lR-1Hf" eventType="editingDidEndOnExit" id="ya7-uC-zSs"/>
-                                </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Go to sleep at 22.6.2012 9:38. " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="5ET-k6-H6Z">
-                                <rect key="frame" x="20" y="351" width="280" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" id="DiR-w0-qBC">
-                                <rect key="frame" x="0.0" y="66" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="mEk-lR-1Hf" id="Udu-Bf-kl1"/>
                                     <outlet property="delegate" destination="mEk-lR-1Hf" id="bNm-21-cWr"/>
                                 </connections>
                             </pickerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="DHF-Os-mF5">
-                                <rect key="frame" x="20" y="15" width="280" height="44"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set End time or additional value" minimumFontSize="17" id="KEt-S7-ZZJ">
+                                <rect key="frame" x="20" y="350" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Choose Event"/>
-                                    <segment title="Choose Time"/>
-                                </segments>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="segmentChanged:" destination="mEk-lR-1Hf" eventType="valueChanged" id="wox-WJ-Gq4"/>
+                                    <outlet property="delegate" destination="mEk-lR-1Hf" id="EUi-pv-ndr"/>
                                 </connections>
-                            </segmentedControl>
-                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="oeJ-zY-zqh">
-                                <rect key="frame" x="0.0" y="66" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="363174737.22794002">
-                                    <!--2012-07-05 09:52:17 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="fi"/>
-                                <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <data key="data">
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set start time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Vc0-Ft-72Z">
+                                <rect key="frame" x="20" y="242" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set additional value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="yUz-Ho-uHu">
+                                <rect key="frame" x="20" y="321" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" label="Ok"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Event" id="SY4-JP-xgh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZEA-bM-SLt">
+                            <connections>
+                                <action selector="cancel:" destination="mEk-lR-1Hf" id="NvZ-QI-8yy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="bD1-uX-5Wt">
+                            <connections>
+                                <action selector="done:" destination="mEk-lR-1Hf" id="yY4-gW-hGr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="additionalInfoField" destination="KEt-S7-ZZJ" id="6fv-Mw-0GA"/>
+                        <outlet property="additionalInfoLabel" destination="yUz-Ho-uHu" id="xrk-Be-2Ns"/>
+                        <outlet property="eventTypePicker" destination="DiR-w0-qBC" id="ea9-aD-VFm"/>
+                        <outlet property="startTimeField" destination="Jtw-Th-CoV" id="dwQ-gb-dYm"/>
+                        <outlet property="timePicker" destination="Pvc-5B-Ahl" id="Q5z-Ud-fsT"/>
+                        <outlet property="timePickerToolbar" destination="LJl-XR-g0C" id="KbT-1e-6XB"/>
+                    </connections>
+                </viewController>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="Pvc-5B-Ahl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <date key="date" timeIntervalSinceReferenceDate="363520803.20862699">
+                        <!--2012-07-09 10:00:03 +0000-->
+                    </date>
+                    <locale key="locale" localeIdentifier="en_US"/>
+                    <timeZone key="timeZone" name="America/Los_Angeles">
+                        <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -136,34 +163,22 @@ AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
-                                </timeZone>
-                                <connections>
-                                    <action selector="dateChanged:" destination="mEk-lR-1Hf" eventType="valueChanged" id="kJi-yN-4bP"/>
-                                </connections>
-                            </datePicker>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <accessibility key="accessibilityConfiguration" label="Ok"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Event" id="SY4-JP-xgh">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZEA-bM-SLt">
-                            <connections>
-                                <action selector="cancel:" destination="mEk-lR-1Hf" id="NvZ-QI-8yy"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="bD1-uX-5Wt">
-                            <connections>
-                                <action selector="done:" destination="mEk-lR-1Hf" id="yY4-gW-hGr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    </timeZone>
                     <connections>
-                        <outlet property="datePicker" destination="oeJ-zY-zqh" id="5zd-L8-blH"/>
-                        <outlet property="eventTypePicker" destination="DiR-w0-qBC" id="ea9-aD-VFm"/>
-                        <outlet property="resultLabel" destination="5ET-k6-H6Z" id="TJc-Fq-Pef"/>
-                        <outlet property="segmentControl" destination="DHF-Os-mF5" id="Sy6-Pz-0Dc"/>
+                        <action selector="startTimeDateChanged:" destination="mEk-lR-1Hf" eventType="valueChanged" id="PAS-3y-o2L"/>
                     </connections>
-                </viewController>
+                </datePicker>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LJl-XR-g0C">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem systemItem="done" id="Jtc-Kv-8Pk">
+                            <connections>
+                                <action selector="timePickerToolbarDone:" destination="mEk-lR-1Hf" id="BC7-bT-7JW"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="2033" y="-126"/>
         </scene>
@@ -296,6 +311,29 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="mark_events.png" width="30" height="30"/>
         <image name="second@2x.png" width="60" height="60"/>
     </resources>
+    <classes>
+        <class className="BabyScheduleAddEventViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BabyScheduleAddEventViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="startTimeDateChanged:"/>
+                <relationship kind="action" name="timePickerToolbarDone:"/>
+                <relationship kind="outlet" name="additionalInfoField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="additionalInfoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="eventTypePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="startTimeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="startTimePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="timePickerToolbar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="BabyScheduleEventListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BabyScheduleEventListViewController.h"/>
+        </class>
+        <class className="BabyScheduleEventMarkingListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BabyScheduleEventMarkingListViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

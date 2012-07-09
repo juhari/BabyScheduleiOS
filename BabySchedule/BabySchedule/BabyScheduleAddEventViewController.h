@@ -19,25 +19,29 @@
 @interface BabyScheduleAddEventViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> 
 {
     UIPickerView       *eventTypePicker;
-    UILabel            *resultLabel;
-    UISegmentedControl *segmentControl;
-    UIDatePicker       *datePicker;
+    UITextField        *startTimeField;
+    UITextField        *additionalInfoField;
+    UIDatePicker       *timePicker;
+    UIToolbar          *timePickerToolbar;
+    UILabel            *additionalInfoLabel;
     int                selectedEventIndex;
 }
 
 @property (nonatomic, weak) id <BabyScheduleAddEventViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIPickerView *eventTypePicker;
-@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
-@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (strong, nonatomic) IBOutlet UITextField *startTimeField;
+@property (strong, nonatomic) IBOutlet UITextField *additionalInfoField;
+@property (strong, nonatomic) IBOutlet UIDatePicker *timePicker;
+@property (strong, nonatomic) IBOutlet UIToolbar *timePickerToolbar;
+@property (strong, nonatomic) IBOutlet UILabel *additionalInfoLabel;
 
 -(IBAction)cancel:(id)sender;
 -(IBAction)done:(id)sender;
--(IBAction)segmentChanged:(id)sender;
--(IBAction)textFieldReturn:(id)sender;
--(IBAction)dateChanged:(id)sender;
+-(IBAction)startTimeDateChanged:(id)sender;
+-(IBAction)timePickerToolbarDone:(id)sender;
 
--(void)updateResultLabel;
+-(void)updateStartTimeField;
+-(void)updateAdditionalInfoField;
 -(void)setPickerViewSelectedValue:(NSString*)value;
 
 @end

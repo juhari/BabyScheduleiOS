@@ -18,13 +18,13 @@
 
 @implementation BabyScheduleAddEventViewController
 
-@synthesize delegate, eventTypePicker, resultLabel, segmentControl, datePicker;
+@synthesize delegate, eventTypePicker, additionalInfoField, startTimeField, timePicker, timePickerToolbar, additionalInfoLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -32,19 +32,18 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [eventTypePicker selectRow:selectedEventIndex inComponent:0 animated:YES];
+    
+    // set timePicker max value to current moment
+    timePicker.maximumDate = [NSDate date];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    // set maximum date of datepicker to current time
-    NSDate* now = [NSDate date];
-    [datePicker setMaximumDate:now];
-    
-    // format resultLabel text
-    [self updateResultLabel];    
-    
+    // setup time picker dialog to be input view for startTimeField
+    self.startTimeField.inputView = self.timePicker;
+    self.startTimeField.inputAccessoryView = self.timePickerToolbar;
 	// Do any additional setup after loading the view.
 }
 
@@ -67,7 +66,7 @@
 - (IBAction)done:(id)sender
 {
     NSString *name = [[BabyScheduleEventTypes allEvents] objectAtIndex:[eventTypePicker selectedRowInComponent:0]];
-    NSDate *date = [datePicker date];
+    NSDate *date = [timePicker date];
     BabyScheduleEvent *event = [[BabyScheduleEvent alloc] init:name date:date];
     BabyScheduleDataStorage *storage = [BabyScheduleDataStorage getInstance];
     [storage insertEvent:event];
@@ -75,40 +74,25 @@
     [self.delegate babyScheduleAddEventViewControllerDidSave:self];
 }
 
--(IBAction)textFieldReturn:(id)sender
+-(IBAction)timePickerToolbarDone:(id)sender
 {
-    [sender resignFirstResponder];
+    [self.startTimeField resignFirstResponder];
 }
 
--(IBAction)segmentChanged:(id)sender
+-(IBAction)startTimeDateChanged:(id)sender
 {
-    if( [segmentControl selectedSegmentIndex] == 0 )
-    {
-        [eventTypePicker setHidden:false];
-        [datePicker setHidden:true];
-    }
-    else 
-    {
-        [eventTypePicker setHidden:true];    
-        [datePicker setHidden:false];
-    }
+    NSDate* date = [timePicker date];
+    startTimeField.text = [BabyScheduleUtils timeAsString:date];
+}
+
+-(void)updateStartTimeField
+{
     
 }
 
--(IBAction)dateChanged:(id)sender
+-(void)updateAdditionalInfoField 
 {
-    // format resultLabel text
-    [self updateResultLabel];
-}
-
--(void)updateResultLabel
-{
-    NSString* eventString = [[BabyScheduleEventTypes allEvents] objectAtIndex:[eventTypePicker selectedRowInComponent:0]];
-    NSDate* selectedDate = [datePicker date];
-    NSString* selectedDateString = [BabyScheduleUtils timeAsString:selectedDate];
-    eventString = [eventString stringByAppendingString:@" "];
-    eventString = [eventString stringByAppendingString:selectedDateString]; 
-    resultLabel.text = eventString;
+    
 }
 
 -(void)setPickerViewSelectedValue:(NSString*)value
@@ -141,7 +125,6 @@ numberOfRowsInComponent:(NSInteger)component
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
-    // format resultLabel text
-    [self updateResultLabel];
+    
 }
 @end
