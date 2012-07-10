@@ -31,10 +31,15 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    [eventTypePicker selectRow:selectedEventIndex inComponent:0 animated:YES];
+    [self.eventTypePicker selectRow:selectedEventIndex inComponent:0 animated:YES];
     
     // set timePicker max value to current moment
-    timePicker.maximumDate = [NSDate date];
+    self.timePicker.maximumDate = [NSDate date];
+    
+    // set start time field to now
+    self.startTimeField.text = [BabyScheduleUtils timeAsString:[NSDate date]];
+
+    [self selectedEventTypeChanged];
 }
 
 - (void)viewDidLoad
@@ -82,7 +87,7 @@
 -(IBAction)startTimeDateChanged:(id)sender
 {
     NSDate* date = [timePicker date];
-    startTimeField.text = [BabyScheduleUtils timeAsString:date];
+    self.startTimeField.text = [BabyScheduleUtils timeAsString:date];
 }
 
 -(void)updateStartTimeField
@@ -98,6 +103,19 @@
 -(void)setPickerViewSelectedValue:(NSString*)value
 {
     selectedEventIndex = [[BabyScheduleEventTypes allEvents] indexOfObjectIdenticalTo:value];
+}
+
+-(void)selectedEventTypeChanged
+{
+    // update the label for additional info 
+    NSString *selectedEventType = [[BabyScheduleEventTypes allEvents] objectAtIndex:selectedEventIndex];
+    if( [selectedEventType isEqualToString:GO_TO_SLEEP_NAME] )
+    {
+        self.additionalInfoLabel.text = @"Select wake up time";
+    }
+    else {
+        self.additionalInfoLabel.text = @"Additional info";
+    }
 }
 
 #pragma mark -
@@ -125,6 +143,7 @@ numberOfRowsInComponent:(NSInteger)component
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
-    
+    selectedEventIndex = row;
+    [self selectedEventTypeChanged];
 }
 @end

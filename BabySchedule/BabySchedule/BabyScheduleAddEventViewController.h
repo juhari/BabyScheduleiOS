@@ -43,5 +43,6 @@
 -(void)updateStartTimeField;
 -(void)updateAdditionalInfoField;
 -(void)setPickerViewSelectedValue:(NSString*)value;
+-(void)selectedEventTypeChanged;
 
 @end
