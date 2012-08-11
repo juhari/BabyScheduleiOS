@@ -12,7 +12,7 @@
 
 @property (strong) NSString *name;
 @property (strong) NSDate *date;
-@property (assign) int duration;
+@property (assign) int durationInSeconds;
 @property (assign) int freeValue;
 
 - (id)init:(NSString*)name date:(NSDate*)date;

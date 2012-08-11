@@ -7,14 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BabyScheduleAddEventDelegate.h"
 
 @class BabyScheduleAddEventViewController;
-
-@protocol BabyScheduleAddEventViewControllerDelegate <NSObject>
--(void)babyScheduleAddEventViewControllerDidCancel: (BabyScheduleAddEventViewController *)controller;
--(void)babyScheduleAddEventViewControllerDidSave: (BabyScheduleAddEventViewController *)controller;
-
-@end
 
 @interface BabyScheduleAddEventViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> 
 {
@@ -22,22 +17,24 @@
     UITextField        *startTimeField;
     UITextField        *additionalInfoField;
     UIDatePicker       *timePicker;
+    UIDatePicker       *timePickerForEnd;
     UIToolbar          *timePickerToolbar;
     UILabel            *additionalInfoLabel;
     int                selectedEventIndex;
 }
 
-@property (nonatomic, weak) id <BabyScheduleAddEventViewControllerDelegate> delegate;
+@property (nonatomic, weak) id <BabyScheduleAddEventDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIPickerView *eventTypePicker;
 @property (strong, nonatomic) IBOutlet UITextField *startTimeField;
 @property (strong, nonatomic) IBOutlet UITextField *additionalInfoField;
 @property (strong, nonatomic) IBOutlet UIDatePicker *timePicker;
+@property (strong, nonatomic) IBOutlet UIDatePicker *timePickerForEnd;
 @property (strong, nonatomic) IBOutlet UIToolbar *timePickerToolbar;
 @property (strong, nonatomic) IBOutlet UILabel *additionalInfoLabel;
 
 -(IBAction)cancel:(id)sender;
 -(IBAction)done:(id)sender;
--(IBAction)startTimeDateChanged:(id)sender;
+-(IBAction)timePickerDateChanged:(id)sender;
 -(IBAction)timePickerToolbarDone:(id)sender;
 
 -(void)updateStartTimeField;

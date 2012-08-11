@@ -43,6 +43,7 @@
 		96AD6E0315A6E18D00C60D4B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6E0215A6E18D00C60D4B /* Icon@2x.png */; };
 		96AD6E0615A6E40F00C60D4B /* list_events.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6E0415A6E40F00C60D4B /* list_events.png */; };
 		96AD6E0715A6E40F00C60D4B /* mark_events.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AD6E0515A6E40F00C60D4B /* mark_events.png */; };
+		96B941A515D655AE001676E6 /* BabyScheduleAddEventNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B941A415D655AE001676E6 /* BabyScheduleAddEventNowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,9 @@
 		96AD6E0215A6E18D00C60D4B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		96AD6E0415A6E40F00C60D4B /* list_events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list_events.png; path = Graphics/list_events.png; sourceTree = "<group>"; };
 		96AD6E0515A6E40F00C60D4B /* mark_events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mark_events.png; path = Graphics/mark_events.png; sourceTree = "<group>"; };
+		96B941A315D655AE001676E6 /* BabyScheduleAddEventNowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleAddEventNowViewController.h; sourceTree = "<group>"; };
+		96B941A415D655AE001676E6 /* BabyScheduleAddEventNowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyScheduleAddEventNowViewController.m; sourceTree = "<group>"; };
+		96B941A715D65B12001676E6 /* BabyScheduleAddEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyScheduleAddEventDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +234,9 @@
 				968C21D81591DAA000CCF055 /* BabyScheduleEventMarkingListViewController.m */,
 				968C21E2159326DD00CCF055 /* BabyScheduleAddEventViewController.h */,
 				968C21E3159326DD00CCF055 /* BabyScheduleAddEventViewController.m */,
+				96B941A315D655AE001676E6 /* BabyScheduleAddEventNowViewController.h */,
+				96B941A415D655AE001676E6 /* BabyScheduleAddEventNowViewController.m */,
+				96B941A715D65B12001676E6 /* BabyScheduleAddEventDelegate.h */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -405,6 +412,7 @@
 				968C21E11591F66200CCF055 /* BabyScheduleDataStorage.m in Sources */,
 				968C21E4159326DD00CCF055 /* BabyScheduleAddEventViewController.m in Sources */,
 				96AD6D8B15A6D11700C60D4B /* BabyScheduleUtils.m in Sources */,
+				96B941A515D655AE001676E6 /* BabyScheduleAddEventNowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

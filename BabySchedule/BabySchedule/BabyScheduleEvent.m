@@ -12,7 +12,7 @@
 
 @synthesize name = _name;
 @synthesize date = _date;
-@synthesize duration = _duration;
+@synthesize durationInSeconds = _duration;
 @synthesize freeValue = _freeValue;
 
 - (id)init:(NSString*)name date:(NSDate*)date {
@@ -27,7 +27,7 @@
     if((self = [super init])) {
         self.name = name;
         self.date = date;
-        self.duration = duration;
+        self.durationInSeconds = duration;
         self.freeValue = freeValue;
     }
     return self;

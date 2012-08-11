@@ -18,7 +18,7 @@
 
 @implementation BabyScheduleAddEventViewController
 
-@synthesize delegate, eventTypePicker, additionalInfoField, startTimeField, timePicker, timePickerToolbar, additionalInfoLabel;
+@synthesize delegate, eventTypePicker, additionalInfoField, startTimeField, timePicker, timePickerForEnd, timePickerToolbar, additionalInfoLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +35,7 @@
     
     // set timePicker max value to current moment
     self.timePicker.maximumDate = [NSDate date];
+    self.timePickerForEnd.minimumDate = [NSDate date];
     
     // set start time field to now
     self.startTimeField.text = [BabyScheduleUtils timeAsString:[NSDate date]];
@@ -71,8 +72,25 @@
 - (IBAction)done:(id)sender
 {
     NSString *name = [[BabyScheduleEventTypes allEvents] objectAtIndex:[eventTypePicker selectedRowInComponent:0]];
-    NSDate *date = [timePicker date];
-    BabyScheduleEvent *event = [[BabyScheduleEvent alloc] init:name date:date];
+    NSDate *startDate = [timePicker date];
+    
+    
+    BabyScheduleEvent *event = nil;
+    if( [name isEqualToString:GO_TO_SLEEP_NAME] )
+    {
+        NSDate *endDate = [timePickerForEnd date];
+        NSTimeInterval interval = [endDate timeIntervalSinceDate:startDate];
+        event = [[BabyScheduleEvent alloc] init:name date:startDate duration:interval freeValue:0];
+    }
+    else if( [name isEqualToString:NURSING_NAME] )
+    {
+        event = [[BabyScheduleEvent alloc] init:name date:startDate];
+    }
+    else {
+        event = [[BabyScheduleEvent alloc] init:name date:startDate];
+    }
+
+
     BabyScheduleDataStorage *storage = [BabyScheduleDataStorage getInstance];
     [storage insertEvent:event];
     
@@ -82,12 +100,24 @@
 -(IBAction)timePickerToolbarDone:(id)sender
 {
     [self.startTimeField resignFirstResponder];
+    [self.additionalInfoField resignFirstResponder];
 }
 
--(IBAction)startTimeDateChanged:(id)sender
+-(IBAction)timePickerDateChanged:(id)sender
 {
-    NSDate* date = [timePicker date];
-    self.startTimeField.text = [BabyScheduleUtils timeAsString:date];
+    if([timePicker isEqual:sender] )
+    {
+        NSDate* date = [timePicker date];
+        self.startTimeField.text = [BabyScheduleUtils timeAsString:date];
+        self.timePickerForEnd.minimumDate = date;
+
+    }
+    else if([timePickerForEnd isEqual:sender])
+    {
+        NSDate* date = [timePickerForEnd date];
+        self.additionalInfoField.text = [BabyScheduleUtils timeAsString:date];
+    }
+    
 }
 
 -(void)updateStartTimeField
@@ -112,6 +142,12 @@
     if( [selectedEventType isEqualToString:GO_TO_SLEEP_NAME] )
     {
         self.additionalInfoLabel.text = @"Select wake up time";
+        self.additionalInfoField.inputView = self.timePickerForEnd;
+        self.additionalInfoField.inputAccessoryView = self.timePickerToolbar;
+    }
+    else if( [selectedEventType isEqualToString:NURSING_NAME] )
+    {
+        self.additionalInfoLabel.text = @"Select duration";
     }
     else {
         self.additionalInfoLabel.text = @"Additional info";

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
         <!--Baby Schedule Event Marking List View Controller - Mark Events-->
@@ -45,7 +44,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="fAe-g5-C0x" kind="modal" identifier="AddEventFromTable" id="uhM-ob-Kul"/>
+                                    <segue destination="QaP-tc-MFi" kind="modal" identifier="AddEventFromTable" id="3nU-Id-GpS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,7 +54,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Event Marking" id="Fk2-pa-Z28">
-                        <barButtonItem key="rightBarButtonItem" title="Mark event" id="vr2-XH-Yi5">
+                        <barButtonItem key="rightBarButtonItem" title="Add event" id="vr2-XH-Yi5">
                             <connections>
                                 <segue destination="fAe-g5-C0x" kind="modal" identifier="AddEvent" id="dTb-9L-oI9"/>
                             </connections>
@@ -64,6 +63,32 @@
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1179" y="-126"/>
+        </scene>
+        <!--Baby Schedule Add Event Now View Controller-->
+        <scene sceneID="MIT-EP-Zyl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9z-DE-bo3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="sIp-A0-1Sh" customClass="BabyScheduleAddEventNowViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="12i-om-GKi">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nej-tW-opQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GJR-pT-Hmt">
+                            <connections>
+                                <action selector="cancel:" destination="sIp-A0-1Sh" id="hqG-SX-9ef"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5bo-BJ-eRB">
+                            <connections>
+                                <action selector="done:" destination="sIp-A0-1Sh" id="FNF-gy-Mjs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2159" y="-423"/>
         </scene>
         <!--Baby Schedule Add Event View Controller - Add Event-->
         <scene sceneID="eD2-jm-Eyh">
@@ -121,7 +146,7 @@
                                 <action selector="cancel:" destination="mEk-lR-1Hf" id="NvZ-QI-8yy"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="bD1-uX-5Wt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bD1-uX-5Wt">
                             <connections>
                                 <action selector="done:" destination="mEk-lR-1Hf" id="yY4-gW-hGr"/>
                             </connections>
@@ -133,6 +158,7 @@
                         <outlet property="eventTypePicker" destination="DiR-w0-qBC" id="ea9-aD-VFm"/>
                         <outlet property="startTimeField" destination="Jtw-Th-CoV" id="dwQ-gb-dYm"/>
                         <outlet property="timePicker" destination="Pvc-5B-Ahl" id="Q5z-Ud-fsT"/>
+                        <outlet property="timePickerForEnd" destination="gML-2S-9jH" id="N2M-xN-gGF"/>
                         <outlet property="timePickerToolbar" destination="LJl-XR-g0C" id="KbT-1e-6XB"/>
                     </connections>
                 </viewController>
@@ -165,7 +191,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
                     </timeZone>
                     <connections>
-                        <action selector="startTimeDateChanged:" destination="mEk-lR-1Hf" eventType="valueChanged" id="PAS-3y-o2L"/>
+                        <action selector="timePickerDateChanged:" destination="mEk-lR-1Hf" eventType="valueChanged" id="4Jg-jO-NB8"/>
                     </connections>
                 </datePicker>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LJl-XR-g0C">
@@ -179,8 +205,40 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </barButtonItem>
                     </items>
                 </toolbar>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="gML-2S-9jH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <date key="date" timeIntervalSinceReferenceDate="366357630.775383">
+                        <!--2012-08-11 06:00:30 +0000-->
+                    </date>
+                    <locale key="locale" localeIdentifier="en_US"/>
+                    <timeZone key="timeZone" name="America/Los_Angeles">
+                        <mutableData key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</mutableData>
+                    </timeZone>
+                    <connections>
+                        <action selector="timePickerDateChanged:" destination="mEk-lR-1Hf" eventType="valueChanged" id="gHL-wE-oMG"/>
+                    </connections>
+                </datePicker>
             </objects>
-            <point key="canvasLocation" x="2033" y="-126"/>
+            <point key="canvasLocation" x="2159" y="180"/>
         </scene>
         <!--Baby Schedule Event List View Controller - Event list-->
         <scene sceneID="13">
@@ -302,7 +360,25 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="1613" y="-126"/>
+            <point key="canvasLocation" x="1662" y="180"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WWM-Ld-Tjk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZY-zd-m6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="QaP-tc-MFi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5sW-P0-iNX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sIp-A0-1Sh" kind="relationship" relationship="rootViewController" id="FRS-ij-qtz"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1662" y="-423"/>
         </scene>
     </scenes>
     <resources>
@@ -312,18 +388,26 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="second@2x.png" width="60" height="60"/>
     </resources>
     <classes>
+        <class className="BabyScheduleAddEventNowViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BabyScheduleAddEventNowViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
         <class className="BabyScheduleAddEventViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BabyScheduleAddEventViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="startTimeDateChanged:"/>
+                <relationship kind="action" name="timePickerDateChanged:"/>
                 <relationship kind="action" name="timePickerToolbarDone:"/>
                 <relationship kind="outlet" name="additionalInfoField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="additionalInfoLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="eventTypePicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="startTimeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="startTimePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="timePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="timePickerForEnd" candidateClass="UIDatePicker"/>
                 <relationship kind="outlet" name="timePickerToolbar" candidateClass="UIToolbar"/>
             </relationships>
         </class>
@@ -339,7 +423,4 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="uhM-ob-Kul"/>
-    </inferredMetricsTieBreakers>
 </document>
