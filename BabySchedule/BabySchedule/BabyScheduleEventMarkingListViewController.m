@@ -10,7 +10,6 @@
 #import "BabyScheduleEvent.h"
 #import "BabyScheduleEventTypes.h"
 #import "BabyScheduleAddEventViewController.h"
-#import "BabyScheduleAddEventNowViewController.h"
 #import "BabyScheduleEventMarkingCell.h"
 #import "BabyScheduleDataStorage.h"
 
@@ -103,12 +102,6 @@
     {
         UINavigationController *navigationController = segue.destinationViewController;
         BabyScheduleAddEventViewController *addEventController = [[navigationController viewControllers] objectAtIndex:0];
-        addEventController.delegate = self;
-    }
-    else if([segue.identifier isEqualToString:@"AddEventFromTable"])
-    {
-        UINavigationController *navigationController = segue.destinationViewController;
-        BabyScheduleAddEventNowViewController *addEventController = [[navigationController viewControllers] objectAtIndex:0];
         addEventController.delegate = self;
     }
 }
