@@ -36,6 +36,7 @@
     // set timePicker max value to current moment
     self.timePicker.maximumDate = [NSDate date];
     self.timePickerForEnd.minimumDate = [NSDate date];
+    self.timePickerForEnd.maximumDate = [NSDate date];
     
     // set start time field to now
     self.startTimeField.text = [BabyScheduleUtils timeAsString:[NSDate date]];
