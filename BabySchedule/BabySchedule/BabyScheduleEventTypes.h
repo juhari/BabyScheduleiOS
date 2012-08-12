@@ -13,8 +13,6 @@ FOUNDATION_EXPORT NSString *const WAKE_UP_NAME;
 FOUNDATION_EXPORT NSString *const MILK_NAME;
 FOUNDATION_EXPORT NSString *const NURSING_NAME;
 
-
-
 @interface BabyScheduleEventTypes
 +(NSArray*)awakeEvents;
 +(NSArray*)sleepEvents;

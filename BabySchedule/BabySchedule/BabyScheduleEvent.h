@@ -18,4 +18,6 @@
 - (id)init:(NSString*)name date:(NSDate*)date;
 - (id)init:(NSString*)name date:(NSDate*)date duration:(int)duration freeValue:(int)freeValue;
 
+-(UIImage*)eventIcon;
+
 @end

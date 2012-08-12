@@ -7,6 +7,7 @@
 //
 
 #import "BabyScheduleEvent.h"
+#import "BabyScheduleEventTypes.h"
 
 @implementation BabyScheduleEvent
 
@@ -31,5 +32,20 @@
         self.freeValue = freeValue;
     }
     return self;
+}
+
+-(UIImage*)eventIcon {
+    if( [self.name isEqualToString:GO_TO_SLEEP_NAME] ||
+       [self.name isEqualToString:WAKE_UP_NAME] ) {
+        return [UIImage imageNamed:@"sleep_icon.png"];
+    }
+    else if( [self.name isEqualToString:MILK_NAME]) {
+        return [UIImage imageNamed:@"milk_icon.png"];
+    }
+    else if( [self.name isEqualToString:NURSING_NAME]) {
+        return [UIImage imageNamed:@"nurse_icon.png"];
+    }
+    
+    return nil;
 }
 @end

@@ -11,6 +11,7 @@
 #import "BabyScheduleEventTypes.h"
 #import "BabyScheduleAddEventViewController.h"
 #import "BabyScheduleAddEventNowViewController.h"
+#import "BabyScheduleEventMarkingCell.h"
 
 @interface BabyScheduleEventMarkingListViewController ()
 
@@ -83,12 +84,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"BasicMarkingCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BabyScheduleEventMarkingCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     BabyScheduleEvent *event = [self.eventsToMark objectAtIndex:indexPath.row];
-    cell.textLabel.text = event.name;
-    
+    cell.eventTypeLabel.text = event.name;
+    cell.eventLastOccurredLabel.text = @"Last occurred to be implemented.";
+    cell.eventIcon.image = [event eventIcon];
     
     return cell;
 }

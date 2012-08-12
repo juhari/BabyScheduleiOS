@@ -80,6 +80,7 @@
     BabyScheduleEvent *event = [[storage allEvents] objectAtIndex:indexPath.row];
     cell.textLabel.text = event.name;
     cell.detailTextLabel.text = [BabyScheduleUtils timeAsString:[event date]];
+    cell.imageView.image = [event eventIcon];
     
     return cell;
 }
