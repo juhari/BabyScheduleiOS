@@ -12,6 +12,7 @@
 #import "BabyScheduleAddEventViewController.h"
 #import "BabyScheduleAddEventNowViewController.h"
 #import "BabyScheduleEventMarkingCell.h"
+#import "BabyScheduleDataStorage.h"
 
 @interface BabyScheduleEventMarkingListViewController ()
 
@@ -91,6 +92,7 @@
     cell.eventTypeLabel.text = event.name;
     cell.eventLastOccurredLabel.text = @"Last occurred to be implemented.";
     cell.eventIcon.image = [event eventIcon];
+    cell.addNowButton.accessibilityIdentifier = event.name;
     
     return cell;
 }
@@ -108,6 +110,39 @@
         UINavigationController *navigationController = segue.destinationViewController;
         BabyScheduleAddEventNowViewController *addEventController = [[navigationController viewControllers] objectAtIndex:0];
         addEventController.delegate = self;
+    }
+}
+
+-(IBAction)addNowButtonPushed:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    
+    NSString *name = button.accessibilityIdentifier;
+    
+    
+    UIAlertView *messageAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Mark now?" message:name delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok",nil];
+    
+    //display alert message
+    [messageAlert show];
+    
+    
+}
+
+#pragma mark UIAlertView
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	// NO = 0, YES = 1
+	if(buttonIndex == 0) {
+		// do nothing
+        return;
+    }
+    else {
+        // save the event
+        NSDate *startDate = [NSDate date];
+        BabyScheduleEvent *event = [[BabyScheduleEvent alloc] init:alertView.message date:startDate];
+        
+        BabyScheduleDataStorage *storage = [BabyScheduleDataStorage getInstance];
+        [storage insertEvent:event];
     }
 }
 

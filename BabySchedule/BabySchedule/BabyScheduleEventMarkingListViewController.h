@@ -16,5 +16,6 @@
 @property (strong) NSMutableArray *sleepEvents;
 @property (strong) NSMutableArray *wakeEvents;
 
+-(IBAction)addNowButtonPushed:(id)sender;
 
 @end

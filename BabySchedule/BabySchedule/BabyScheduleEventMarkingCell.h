@@ -10,9 +10,9 @@
 
 @interface BabyScheduleEventMarkingCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UIImageView *eventIcon;
-@property (strong, nonatomic) IBOutlet UILabel *eventTypeLabel;
-@property (strong, nonatomic) IBOutlet UILabel *eventLastOccurredLabel;
-@property (strong, nonatomic) IBOutlet UIButton *addNowButton;
+@property (weak, nonatomic) IBOutlet UIImageView *eventIcon;
+@property (weak, nonatomic) IBOutlet UILabel *eventTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eventLastOccurredLabel;
+@property (weak, nonatomic) IBOutlet UIButton *addNowButton;
 
 @end
